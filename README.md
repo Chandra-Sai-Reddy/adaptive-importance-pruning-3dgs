@@ -1,3 +1,21 @@
+# Adaptive Importance Pruning for Memory-Efficient 3D Gaussian Splatting
+
+CSC 8851 Deep Learning project by Chandra Sai Reddy Donthireddy. This fork investigates importance-aware pruning schedules for reducing the memory and storage cost of 3D Gaussian Splatting while preserving novel-view quality.
+
+## Current reproducible milestone
+
+The official 3DGS baseline has been reproduced on the Mip-NeRF 360 Bicycle scene using one NVIDIA A100-SXM4-40GB GPU. The completed 30,000-iteration run obtained **25.1361 dB PSNR**, **0.7473 SSIM**, and **0.2422 LPIPS**, with **4,770,285 Gaussians** and a **1.2 GB** final point cloud. These are baseline measurements, not pruning results.
+
+- [Purdue Anvil environment setup](docs/ANVIL_SETUP.md)
+- [Baseline reproduction and verified results](docs/REPRODUCIBILITY.md)
+- [Slurm training, evaluation, and smoke-test scripts](slurm/)
+
+> Project status: baseline reproduction and infrastructure are complete. Adaptive-pruning implementation and controlled comparisons are in progress.
+
+---
+
+## Upstream 3DGS documentation
+
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 Bernhard Kerbl*, Georgios Kopanas*, Thomas Leimkühler, George Drettakis (* indicates equal contribution)<br>
 | [Webpage](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [Full Paper](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf) | [Video](https://youtu.be/T_kXY43VZnk) | [Other GRAPHDECO Publications](http://www-sop.inria.fr/reves/publis/gdindex.php) | [FUNGRAPH project page](https://fungraph.inria.fr) |<br>
